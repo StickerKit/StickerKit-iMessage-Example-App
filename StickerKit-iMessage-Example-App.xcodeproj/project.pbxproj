@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		848ABD731D7F3D9A0032A33F /* StickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848ABD721D7F3D9A0032A33F /* StickerCell.swift */; };
 		84A73FD91D7F39860040259D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A73FD81D7F39860040259D /* Assets.xcassets */; };
 		84A73FE01D7F39870040259D /* MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 84A73FDF1D7F39870040259D /* MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		84A73FE51D7F39870040259D /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A73FE41D7F39870040259D /* Messages.framework */; };
 		84A73FE81D7F39870040259D /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A73FE71D7F39870040259D /* MessagesViewController.swift */; };
 		84A73FEB1D7F39870040259D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A73FE91D7F39870040259D /* MainInterface.storyboard */; };
 		84A73FED1D7F39870040259D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A73FEC1D7F39870040259D /* Assets.xcassets */; };
+		84A73FF91D7F3BE00040259D /* StickerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A73FF81D7F3BE00040259D /* StickerKit.framework */; };
+		84A73FFC1D7F3C0A0040259D /* StickerKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84A73FFB1D7F3C0A0040259D /* StickerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +40,20 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84A73FFA1D7F3BF20040259D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				84A73FFC1D7F3C0A0040259D /* StickerKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		848ABD721D7F3D9A0032A33F /* StickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerCell.swift; sourceTree = "<group>"; };
 		84A73FD51D7F39860040259D /* StickerKit-iMessage-Example-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StickerKit-iMessage-Example-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A73FD81D7F39860040259D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84A73FDA1D7F39860040259D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +63,8 @@
 		84A73FEA1D7F39870040259D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		84A73FEC1D7F39870040259D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84A73FEE1D7F39870040259D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84A73FF81D7F3BE00040259D /* StickerKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StickerKit.framework; path = Carthage/Build/iOS/StickerKit.framework; sourceTree = "<group>"; };
+		84A73FFB1D7F3C0A0040259D /* StickerKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StickerKit.framework; path = Carthage/Build/iOS/StickerKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A73FE51D7F39870040259D /* Messages.framework in Frameworks */,
+				84A73FF91D7F3BE00040259D /* StickerKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +83,7 @@
 		84A73FCE1D7F39860040259D = {
 			isa = PBXGroup;
 			children = (
+				84A73FFB1D7F3C0A0040259D /* StickerKit.framework */,
 				84A73FD71D7F39860040259D /* StickerKit-iMessage-Example-App */,
 				84A73FE61D7F39870040259D /* MessagesExtension */,
 				84A73FE31D7F39870040259D /* Frameworks */,
@@ -94,6 +112,7 @@
 		84A73FE31D7F39870040259D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84A73FF81D7F3BE00040259D /* StickerKit.framework */,
 				84A73FE41D7F39870040259D /* Messages.framework */,
 			);
 			name = Frameworks;
@@ -102,8 +121,9 @@
 		84A73FE61D7F39870040259D /* MessagesExtension */ = {
 			isa = PBXGroup;
 			children = (
-				84A73FE71D7F39870040259D /* MessagesViewController.swift */,
 				84A73FE91D7F39870040259D /* MainInterface.storyboard */,
+				84A73FE71D7F39870040259D /* MessagesViewController.swift */,
+				848ABD721D7F3D9A0032A33F /* StickerCell.swift */,
 				84A73FEC1D7F39870040259D /* Assets.xcassets */,
 				84A73FEE1D7F39870040259D /* Info.plist */,
 			);
@@ -137,6 +157,7 @@
 				84A73FDB1D7F39870040259D /* Sources */,
 				84A73FDC1D7F39870040259D /* Frameworks */,
 				84A73FDD1D7F39870040259D /* Resources */,
+				84A73FFA1D7F3BF20040259D /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -214,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A73FE81D7F39870040259D /* MessagesViewController.swift in Sources */,
+				848ABD731D7F3D9A0032A33F /* StickerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,8 +355,13 @@
 		84A73FF21D7F39870040259D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				DEVELOPMENT_TEAM = CTK3U7YSWC;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MessagesExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.stickerkit.StickerKit-iMessage-Example-App.MessagesExtension";
@@ -347,8 +374,13 @@
 		84A73FF31D7F39870040259D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				DEVELOPMENT_TEAM = CTK3U7YSWC;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MessagesExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.stickerkit.StickerKit-iMessage-Example-App.MessagesExtension";
@@ -405,6 +437,7 @@
 				84A73FF31D7F39870040259D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84A73FF51D7F39870040259D /* Build configuration list for PBXNativeTarget "StickerKit-iMessage-Example-App" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +446,7 @@
 				84A73FF71D7F39870040259D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
