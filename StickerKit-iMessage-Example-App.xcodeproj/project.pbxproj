@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		848ABD731D7F3D9A0032A33F /* StickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848ABD721D7F3D9A0032A33F /* StickerCell.swift */; };
+		848ABD741D7F577E0032A33F /* StickerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A73FF81D7F3BE00040259D /* StickerKit.framework */; };
 		84A73FD91D7F39860040259D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A73FD81D7F39860040259D /* Assets.xcassets */; };
 		84A73FE01D7F39870040259D /* MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 84A73FDF1D7F39870040259D /* MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		84A73FE51D7F39870040259D /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A73FE41D7F39870040259D /* Messages.framework */; };
 		84A73FE81D7F39870040259D /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A73FE71D7F39870040259D /* MessagesViewController.swift */; };
 		84A73FEB1D7F39870040259D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A73FE91D7F39870040259D /* MainInterface.storyboard */; };
 		84A73FED1D7F39870040259D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A73FEC1D7F39870040259D /* Assets.xcassets */; };
-		84A73FF91D7F3BE00040259D /* StickerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A73FF81D7F3BE00040259D /* StickerKit.framework */; };
 		84A73FFC1D7F3C0A0040259D /* StickerKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84A73FFB1D7F3C0A0040259D /* StickerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -73,7 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A73FE51D7F39870040259D /* Messages.framework in Frameworks */,
-				84A73FF91D7F3BE00040259D /* StickerKit.framework in Frameworks */,
+				848ABD741D7F577E0032A33F /* StickerKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +158,7 @@
 				84A73FDC1D7F39870040259D /* Frameworks */,
 				84A73FDD1D7F39870040259D /* Resources */,
 				84A73FFA1D7F3BF20040259D /* CopyFiles */,
+				8491947D1D7FBB23006B254D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -228,6 +229,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8491947D1D7FBB23006B254D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/StickerKit.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84A73FDB1D7F39870040259D /* Sources */ = {
